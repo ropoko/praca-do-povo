@@ -8,7 +8,9 @@ function MenuLinks() {
         <Link href="/">Home</Link>
       </li>
       <li>
-        <Link href="/sobre">Sobre o projeto</Link>
+        <Link href="/about" as="/sobre">
+          Sobre o projeto
+        </Link>
       </li>
     </>
   );
