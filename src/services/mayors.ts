@@ -11,17 +11,14 @@ export async function getMayors() {
 		headers: {
 			"Content-Type": "application/json",
 		},
-		cache: "force-cache"
+		cache: "force-cache",
+		next: {
+			// 1 day
+			revalidate: 60 * 60 * 24,
+		},
 	}).then((res) => res.json()));
 
 	const data = await Promise.all(promises);
-
-	console.log('hey irs me', data);
-
-	// updateStore(data);
-
-	// Update the store
-	// useStore.getState().setData(data);
 
 	return data;
 }
