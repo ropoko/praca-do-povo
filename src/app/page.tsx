@@ -1,40 +1,51 @@
 import Image from "next/image";
-import CandidateGrid from "@/components/CandidateGrid";
-import Header from "@/components/Header";
-import ListCities from "@/components/ListCities";
-import ListMayors from "@/components/ListMayors";
+import Header from "@/components/shared/Header";
+import ListCities from "@/components/pages/Home/CitiesList";
+import ChevronRightIcon from "@/components/Icons/ChevronRight";
+import BasePage from "@/components/shared/BasePage";
 
-export default function Home() {
+export default function HomePage() {
 	return (
-		<>
-			<Header />
+		<BasePage> 
+			<div
+				className="
+							w-full
+							max-h-44
+							h-[25vh]
+							-mb-32
+							bg-[url('/panoramic-city.png')]		
+							bg-center
+							bg-cover					
+						"
+			></div>
 			<main className="container mx-auto px-4 py-8">
-				<div className="flex justify-between items-start">
-					<div className="w-1/2">
-						<h1 className="text-6xl font-bold">Voto</h1>
-						<h1 className="text-8xl font-bold">360</h1>
-						<p className="mt-4 text-lg">
+				<div className="flex flex-col md:flex-row justify-between gap-[8vw]">
+					<div className="w-full md:w-[25vw] mt-28">
+						<h1 className="text-2xl font-bold">Praça do Povo</h1>
+						<p className="mt-2 text-md mb-3">
 							Conheça as propostas dos candidatos que estão concorrendo em seu
 							Município
 						</p>
 						<ListCities />
-						<ListMayors />
-
-						<button className="mt-4 bg-white text-gray-900 px-4 py-2 rounded-full">
-							Entenda a importância do seu voto
+						<div className="divider"></div>
+						<button className="btn btn-primary w-full flex flex-row justify-between">
+							<span className="whitespace-normal flex-1 text-left">
+								Entenda a importância do seu voto
+							</span>
+							<ChevronRightIcon />
 						</button>
 					</div>
-					<div className="w-1/2">
-						<CandidateGrid />
+					<div className="flex-1 flex justify-end">
 						<Image
-							src="/voting-machine.png"
+							src="/voting-machine.svg"
 							alt="Voting Machine"
+							className="w-full"
 							width={500}
 							height={500}
 						/>
 					</div>
 				</div>
 			</main>
-		</>
+		</BasePage>
 	);
 }

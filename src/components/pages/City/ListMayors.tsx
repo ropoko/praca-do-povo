@@ -1,5 +1,5 @@
 import { use } from "react";
-import { getMayors } from "../services/mayors";
+import { getMayors } from "../../../services/mayors";
 
 export default function ListMayors() {
 	const mayors = use(getMayors());
