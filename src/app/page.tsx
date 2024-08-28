@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Header from "@/components/shared/Header";
 import ListCities from "@/components/pages/Home/CitiesList";
 import ChevronRightIcon from "@/components/Icons/ChevronRight";
 import BasePage from "@/components/shared/BasePage";
@@ -21,7 +20,7 @@ export default function HomePage() {
 			<main className="container mx-auto px-4 py-8">
 				<div className="flex flex-col md:flex-row justify-between gap-[8vw]">
 					<div className="w-full md:w-[25vw] mt-28">
-						<h1 className="text-2xl font-bold">Praça do Povo</h1>
+						<h1 className="text-2xl font-bold text-white">Praça do Povo</h1>
 						<p className="mt-2 text-md mb-3">
 							Conheça as propostas dos candidatos que estão concorrendo em seu
 							Município
