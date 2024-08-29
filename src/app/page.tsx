@@ -5,21 +5,21 @@ import BasePage from "@/components/shared/BasePage";
 
 export default function HomePage() {
 	return (
-		<BasePage> 
+		<BasePage>
 			<div
 				className="
 							w-full
 							max-h-44
 							h-[25vh]
 							-mb-32
-							bg-[url('/panoramic-city.png')]		
-							bg-center
-							bg-cover					
+							bg-[url('/panoramic-view.jpg')]		
+							bg-[center_top_40%]
+							bg-cover											
 						"
 			></div>
 			<main className="container mx-auto px-4 py-8">
 				<div className="flex flex-col md:flex-row justify-between gap-[8vw]">
-					<div className="w-full md:w-[25vw] mt-28">
+					<div className="flex-1 mt-28">
 						<h1 className="text-2xl font-bold text-white">Praça do Povo</h1>
 						<p className="mt-2 text-md mb-3">
 							Conheça as propostas dos candidatos que estão concorrendo em seu
@@ -34,11 +34,11 @@ export default function HomePage() {
 							<ChevronRightIcon />
 						</button>
 					</div>
-					<div className="flex-1 flex justify-end">
+					<div className="w-full md:w-max flex justify-end md:max-w-[60%]">
 						<Image
 							src="/voting-machine.svg"
 							alt="Voting Machine"
-							className="w-full"
+							className=" w-full md:w-auto h-auto md:h-[72vh] md:max-w-full"
 							width={500}
 							height={500}
 						/>
