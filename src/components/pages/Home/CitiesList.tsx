@@ -2,11 +2,12 @@ import Link from "next/link";
 import { CITIES } from "../../../config";
 
 export default function CitiesList() {
+	
 	return (
 		<div className="flex flex-col gap-4">
 			{CITIES.map((city) => (
 				<Link
-					href={`/${city.slug}`}
+					href={`/cities/${city.slug}`}
 					className="btn btn-neutral flex justify-between"
 				>
 					<span className="whitespace-normal flex-1 text-left">

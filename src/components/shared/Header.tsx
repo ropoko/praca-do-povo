@@ -1,15 +1,23 @@
+'use client';
 import Link from "next/link";
 import MenuIcon from "../Icons/Menu";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 
 function MenuLinks() {
+  const pathname = usePathname();
+
+  const activeClass = "text-white";
+  
   return (
     <>
       <li>
-        <Link href="/">Home</Link>
+        <Link href="/" className={pathname == "/" ? activeClass : ""}>
+          Início
+        </Link>
       </li>
       <li>
-        <Link href="/about" as="/sobre">
+        <Link href="/about" className={pathname == "/sobre" ? activeClass : ""}>
           Sobre o projeto
         </Link>
       </li>

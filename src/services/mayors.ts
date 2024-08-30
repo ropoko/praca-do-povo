@@ -12,8 +12,7 @@ export async function getMayors() {
 			"Content-Type": "application/json",
 		},
 		cache: "force-cache",
-		next: {
-			// 1 day
+		next: { 
 			revalidate: 60 * 60 * 24,
 		},
 	}).then((res) => res.json()));
