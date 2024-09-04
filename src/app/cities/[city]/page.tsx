@@ -20,7 +20,7 @@ export default function CityPage() {
 
 	return (
 		<BasePage>
-			<main className="container mx-auto px-4 py-8">
+			<main className="container mx-auto px-4 py-4">
 				<div className="flex flex-col sm:flex-row  gap-6 justify-start items-start sm:justify-between sm:items-center w-full">
 					<a className="btn btn-ghost relative -left-4 w-max text-white" href="/">
 						<ChevronLeft />
@@ -41,7 +41,7 @@ export default function CityPage() {
 				</div>
 				<div className="flex flex-col md:flex-row gap-6 mt-6">
 					<div className="flex-[1]">
-						<MayorsAccordion search={search}/>
+						<MayorsAccordion search={search} city={city?.slug || ''}/>
 					</div>
 					<div className="flex-[2]">
 						<CouncilorsAccordion search={search}/>

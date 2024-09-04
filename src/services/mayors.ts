@@ -1,23 +1,23 @@
-"use server";
-
 import { getCities } from "@/config";
+import { RootObject } from "@/types/mayor";
 
-export async function getMayors() {
+export async function getMayors({ city }: { city: string }): Promise<RootObject> {
+	const cityData = getCities().find((c) => c.slug === city);
 
-	const cities = getCities();
+	if (!cityData) {
+		return Promise.reject("Cidade não encontrada");
+	}
 
-	const promises = cities.map((city) => fetch(city.url, {
+	const mayors = await fetch(cityData.url, {
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json",
 		},
 		cache: "force-cache",
-		next: { 
+		next: {
 			revalidate: 60 * 60 * 24,
 		},
-	}).then((res) => res.json()));
+	}).then((res) => res.json());
 
-	const data = await Promise.all(promises);
-
-	return data;
+	return mayors;
 }
