@@ -12,9 +12,9 @@ export default function HomePage() {
 							max-h-44
 							h-[25vh]
 							-mb-32
-							bg-[url('/panoramic-view.jpg')]		
+							bg-[url('/panoramic-view.jpg')]
 							bg-[center_top_40%]
-							bg-cover											
+							bg-cover
 						"
 			></div>
 			<main className="container mx-auto px-4 py-8">
@@ -41,6 +41,7 @@ export default function HomePage() {
 							className=" w-full md:w-auto h-auto md:h-[72vh] md:max-w-full"
 							width={500}
 							height={500}
+							priority
 						/>
 					</div>
 				</div>

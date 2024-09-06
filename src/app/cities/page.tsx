@@ -1,6 +1,7 @@
-import { permanentRedirect } from 'next/navigation'
-import React from 'react'
+"use client";
+
+import { permanentRedirect } from "next/navigation";
 
 export default function citiesPage() {
-    permanentRedirect(`/`)
+	permanentRedirect(`/`);
 }
