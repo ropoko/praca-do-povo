@@ -2,6 +2,7 @@ import ChevronLeft from "@/components/Icons/ChevronLeft";
 import SearchIcon from "@/components/Icons/Search";
 import CouncilorsAccordion from "@/components/pages/City/CouncilorsAccordion";
 import BasePage from "@/components/shared/BasePage";
+import { CITIES } from "@/config";
 
 import dynamic from "next/dynamic";
 
@@ -10,6 +11,9 @@ const MayorsList = dynamic(() => import("@/components/pages/City/MayorsList"), {
 });
 
 export default function CityPage({ params }: { params: { city: string } }) {
+
+	const city = CITIES.find((c) => c.slug === params.city);
+
 	return (
 		<BasePage>
 			<main className="container mx-auto px-4 py-4">
@@ -19,7 +23,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
 						href="/"
 					>
 						<ChevronLeft />
-						{/* <span>{city?.name}</span> */}
+						<span>{city?.name}</span>
 					</a>
 					<div className="w-full">
 						<label className="input input-bordered flex items-center gap-2 w-full flex-1 sm:w-auto">
