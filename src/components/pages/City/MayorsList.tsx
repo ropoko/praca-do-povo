@@ -17,8 +17,8 @@ export default async function MayorsList({ city }: Props) {
 			</div>
 			<div className="collapse-content">
 				<div className="w-full">
-					{mayors.candidatos.map((c: any) => (
-						<MayorCard key={c.id} mayor={c} />
+					{mayors.candidatos.map((candidate: any) => (
+						<MayorCard key={candidate.id} mayor={candidate} city={city} />
 					))}
 				</div>
 			</div>

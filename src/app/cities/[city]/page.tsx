@@ -11,7 +11,6 @@ const MayorsList = dynamic(() => import("@/components/pages/City/MayorsList"), {
 });
 
 export default function CityPage({ params }: { params: { city: string } }) {
-
 	const city = CITIES.find((c) => c.slug === params.city);
 
 	return (
