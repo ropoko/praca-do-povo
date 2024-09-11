@@ -1,4 +1,5 @@
 import { getCouncilors } from "@/services/councilors";
+import Link from "next/link";
 
 type Props = {
 	city: string;
@@ -32,7 +33,9 @@ export default async function CouncilorsAccordion({ city, search }: Props) {
 						<h1 className="text-orange-500 text-lg font-bold">{party}</h1>
 						{councilors.map((councilor) => (
 							<div key={councilor.id}>
-								<p>{councilor.nomeUrna}</p>
+								<Link href={`/cities/${city}/councilors/${councilor.id}`}>
+									{councilor.nomeUrna}
+								</Link>
 							</div>
 						))}
 					</div>
