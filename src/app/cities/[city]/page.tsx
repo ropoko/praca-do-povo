@@ -36,7 +36,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
 						<MayorsList city={params.city} />
 					</div>
 					<div className="flex-[2]">
-						<CouncilorsAccordion search={""} />
+						<CouncilorsAccordion city={params.city} search={""} />
 					</div>
 				</div>
 			</main>

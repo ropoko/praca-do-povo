@@ -10,7 +10,9 @@ const API_URLS = {
 	VICE_MAYOR_BARRA_BY_ID: `${BASE_URL}/divulga/rest/v1/candidatura/buscar/2024/62057/2045202024/candidato`,
 	VICE_MAYOR_IGARACU_BY_ID: `${BASE_URL}/divulga/rest/v1/candidatura/buscar/2024/65013/2045202024/candidato`,
 	COUNCILORS_BARRA: `${BASE_URL}/divulga/rest/v1/candidatura/listar/2024/62057/2045202024/13/candidatos`,
-	COUNCILORS_IGARACU: `${BASE_URL}/divulga/rest/v1/candidatura/listar/2024/65013/2045202024/13/candidatos`
+	COUNCILORS_IGARACU: `${BASE_URL}/divulga/rest/v1/candidatura/listar/2024/65013/2045202024/13/candidatos`,
+	COUNCILORS_BARRA_BY_ID: `${BASE_URL}/divulga/rest/v1/candidatura/buscar/2024/62057/2045202024/candidato`,
+	COUNCILORS_IGARACU_BY_ID: `${BASE_URL}/divulga/rest/v1/candidatura/buscar/2024/65013/2045202024/candidato`
 }
 
 export const CITIES = [
@@ -21,7 +23,8 @@ export const CITIES = [
 		mayorDetailsUrl: API_URLS.MAYOR_BARRA_BY_ID,
 		viceMayorsUrl: API_URLS.VICE_MAYORS_BARRA,
 		viceMayorDetailsUrl: API_URLS.VICE_MAYOR_BARRA_BY_ID,
-		councilorsUrl: API_URLS.COUNCILORS_BARRA
+		councilorsUrl: API_URLS.COUNCILORS_BARRA,
+		councilorsDetailsUrl: API_URLS.COUNCILORS_BARRA_BY_ID
 	},
 	{
 		name: 'Igaraçu do Tietê',
@@ -30,7 +33,8 @@ export const CITIES = [
 		mayorDetailsUrl: API_URLS.MAYOR_IGARACU_BY_ID,
 		viceMayorsUrl: API_URLS.VICE_MAYORS_IGARACU,
 		viceMayorDetailsUrl: API_URLS.VICE_MAYOR_IGARACU_BY_ID,
-		councilorsUrl: API_URLS.COUNCILORS_IGARACU
+		councilorsUrl: API_URLS.COUNCILORS_IGARACU,
+		councilorsDetailsUrl: API_URLS.COUNCILORS_IGARACU_BY_ID
 	}
 ];
 
