@@ -1,7 +1,7 @@
 import ChevronLeft from '@/components/Icons/ChevronLeft';
 import SearchIcon from '@/components/Icons/Search';
 import CouncilorsAccordion from '@/components/pages/City/CouncilorsAccordion';
-import BasePage from '@/components/shared/BasePage';
+import BasePage from '@/components/shared/legacy/BasePage';
 import { CITIES } from '@/config';
 
 import dynamic from 'next/dynamic';

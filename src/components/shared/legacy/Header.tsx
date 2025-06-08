@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import MenuIcon from '../Icons/Menu';
+import MenuIcon from '../../Icons/Menu';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 
