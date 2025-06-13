@@ -1,12 +1,12 @@
 import ChevronLeft from '@/components/Icons/ChevronLeft';
 import SearchIcon from '@/components/Icons/Search';
-import CouncilorsAccordion from '@/components/pages/City/CouncilorsAccordion';
+import CouncilorsAccordion from '@/components/pages/legacy/City/CouncilorsAccordion';
 import BasePage from '@/components/shared/legacy/BasePage';
 import { CITIES } from '@/config';
 
 import dynamic from 'next/dynamic';
 
-const MayorsList = dynamic(() => import('@/components/pages/City/MayorsList'), {
+const MayorsList = dynamic(() => import('@/components/pages/legacy/City/MayorsList'), {
   loading: () => <p>Carregando...</p>,
 });
 

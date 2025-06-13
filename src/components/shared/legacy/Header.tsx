@@ -43,7 +43,7 @@ export default function Header() {
           </div>
 
           <a className="btn btn-ghost text-xl">
-            <Image src="/logo.svg" width={24} height={24} alt="logo" />
+            <Image src="/legacy/logo.svg" width={24} height={24} alt="logo" />
           </a>
         </div>
 

@@ -13,14 +13,14 @@ function MenuLinks() {
     <>
       <li>
         <Link href="/" className={pathname == '/' ? activeClass : ''}>
-          Início
+          Página Inicial
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link href="/about" className={pathname == '/sobre' ? activeClass : ''}>
           Sobre o projeto
         </Link>
-      </li>
+      </li> */}
     </>
   );
 }
@@ -43,7 +43,7 @@ export default function Header() {
           </div>
 
           <a className="btn btn-ghost text-xl">
-            <Image src="/logo.svg" width={24} height={24} alt="logo" />
+            <Image src="/logo_horizontal_dark.svg" width={116.11} height={24} alt="logo" />
           </a>
         </div>
 

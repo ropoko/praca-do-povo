@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ListCities from '@/components/pages/Home/CitiesList';
+import ListCities from '@/components/pages/legacy/Home/CitiesList';
 import ChevronRightIcon from '@/components/Icons/ChevronRight';
 import BasePage from '@/components/shared/legacy/BasePage';
 import Link from 'next/link';
@@ -13,7 +13,7 @@ export default function HomePage() {
 				max-h-44
 				h-[25vh]
 				-mb-32
-				bg-[url('/panoramic-view.jpg')]
+				bg-[url('/legacy/panoramic-view.jpg')]
 				bg-[center_top_40%]
 				bg-cover
 			"
@@ -38,7 +38,7 @@ export default function HomePage() {
           </div>
           <div className="w-full md:w-max flex justify-end md:max-w-[60%]">
             <Image
-              src="/voting-machine.svg"
+              src="/legacy/voting-machine.svg"
               alt="Voting Machine"
               className=" w-full md:w-auto h-auto md:h-[72vh] md:max-w-full"
               width={500}
