@@ -1,14 +1,24 @@
-import Image from 'next/image';
-import ListCities from '@/components/pages/legacy/Home/CitiesList';
-import ChevronRightIcon from '@/components/Icons/ChevronRight';
 import BasePage from '@/components/shared/BasePage';
-import Link from 'next/link';
+import Hero from '@/components/pages/Home/Hero';
+import Process from '@/components/pages/Home/Process';
+import Law from '@/components/pages/Home/Law';
+import Mission from '@/components/pages/Home/Mission';
 
-export default function HomePage() {
+export default function Home() {
   return (
     <BasePage>
-      <h1>hello world</h1>
-      <div className="bg-primary text-primary-content">Primary color</div>
+      <section>
+        <Hero />
+      </section>
+      <section>
+        <Process />
+      </section>
+      <section>
+        <Law />
+      </section>
+      <section>
+        <Mission />
+      </section>
     </BasePage>
   );
 }
